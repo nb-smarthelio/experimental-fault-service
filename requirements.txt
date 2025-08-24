@@ -1,0 +1,3 @@
+pandas>=2.0.0
+pyyaml>=6.0.1
+git+https://x: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@github.com/SmartHelio/heliolib.git

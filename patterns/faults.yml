@@ -1,0 +1,19 @@
+# Fault pattern file
+defaults:
+  plant_id: p01
+  asset_id: inv_7
+
+faults:
+  - id: grid_curtailment_v1
+    description: >
+      High irradiance but curtailed AC power relative to expected or setpoint limits.
+    condition: "irradiance_wm2 >= 600 and ac_power_kw < 80"
+    min_points: 3
+    confidence: 0.9
+
+  - id: low_power_steady_v1
+    description: >
+      Prolonged low AC power.
+    condition: "ac_power_kw < 50"
+    min_points: 5
+    confidence: 0.8
